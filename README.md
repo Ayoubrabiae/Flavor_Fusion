@@ -12,6 +12,7 @@ Flavour Fusion is a web application that provides a collection of recipes from v
 ## Demo
 A live demo of the Flavor Fusion is available at  [Demo](https://ayoubrabiae.github.io/Flavor_Fusion)
 
+![IMG_20230610_124949](https://github.com/Ayoubrabiae/Flavor_Fusion/assets/105998148/bf858fe3-5f54-4700-ae80-1d433e08babc)
 
 ## Technologies Used
 - HTML5
