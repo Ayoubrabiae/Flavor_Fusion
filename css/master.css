@@ -1,0 +1,566 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+:root {
+  --primary-color: #00BFFF;
+  --secondary-color: #FFA500;
+  --drt: 0.3s
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Dancing Script', cursive;
+  background-color: #FFFDD0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* @media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+} */
+
+/* App Styling */
+
+main {
+  position: relative;
+}
+
+header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+@media (max-width: 767px) {
+  header .container {
+    flex-direction: column;
+  }
+}
+
+header h1 {
+  color: var(--primary-color);
+}
+
+@media (max-width: 767px) {
+  header h1 {
+    margin-bottom: 20px;
+  }
+}
+
+.search {
+  position: relative;
+}
+
+.search input {
+  padding: 10px 35px 10px 15px;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  width: 300px;
+  box-shadow: 0 0 2px #000;
+}
+
+.search i {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(136 136 136 / 72%);
+  color: #2e2e2e;
+}
+
+.bottom-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.bottom-bar .container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+.bottom-bar .container div.active {
+  color: var(--primary-color);
+}
+
+.bottom-bar div i {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+
+/* Home styling */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-image: url("../media/hero.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #000;
+  opacity: 0.7;
+}
+
+.hero-section .container {
+  position: relative;
+}
+
+.hero-section q {
+  color: white;
+  font-size: 25px;
+  line-height: 1.7;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.hero-section button {
+  display: block;
+  margin: 0 auto;
+  padding: 8px 25px;
+  font-size: 17px;
+  font-family: "dancing script";
+  text-transform: capitalize;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition-duration: var(--drt);
+}
+
+.hero-section button:hover {
+  background-color: var(--primary-color);
+}
+
+/* Search results styling */
+
+.search-results {
+  padding: 100px 0;
+}
+
+.search-results .hero-content {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .search-results {
+    padding: 150px 0 100px;
+  }
+}
+
+.search-results .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.search-results .box {
+  padding: 20px;
+  box-shadow: 0 0 10px #777;
+  border-radius: 10px;
+}
+
+.search-results .box .image {
+  margin-bottom: 20px;
+}
+
+.search-results .box .image img {
+  box-shadow: 0 0 10px #ccc;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.search-results .box .text {
+  text-align: center;
+}
+
+.search-results .box .text h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.search-results .box .text div {
+  display: inline-block;
+  margin-bottom: 20px;
+  font-family: cursive;
+  text-transform: capitalize;
+}
+
+.search-results .box .text div i {
+  margin-right: 10px;
+}
+
+.search-results .box .text .area {
+  margin-right: 20px;
+}
+
+.search-results .box .text .show-btn {
+  display: block;
+  margin: 0 auto;
+  padding: 5px 10px;
+  font-size: 16px;
+  font-family: "dancing script";
+  font-weight: 900;
+  border: none;
+  background-color: var(--secondary-color);
+  border-radius: 30px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.search-results .wrong-text {
+  font-family: cursive;
+  color: red;
+  font-weight: bold;
+  grid-column: 1/3;
+}
+
+/*Meal details styling*/
+
+.meal-details .image {
+  height: 350px;
+  width: 40%;
+  max-width: 500px;
+  background-size: cover;
+  display: inline-block;
+  margin-left: 100px;
+}
+
+@media (max-width: 767px) {
+  .meal-details .image {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.meal-details .info {
+  width: calc(60% - 100px);
+  padding: 15px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 350px;
+}
+
+@media (max-width: 767px) {
+  .meal-details .info {
+    width: 100%;
+    color: white;
+    background-color: rgb(0 0 0 / 43%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.meal-details .info h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+@media (max-width: 767px) {
+  .meal-details .info h2 {
+    font-size: 30px;
+  }
+}
+
+.meal-details .info div {
+  font-size: 20px;
+  font-family: cursive;
+}
+
+@media (max-width: 767px) {
+  .meal-details .info div {
+    font-size: 16px;
+  }
+}
+
+.meal-details .info div i {
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+.meal-details .info .category {
+  margin-bottom: 20px;
+}
+
+.meal-details .info .tags {
+  display: flex;
+  width: 100%;
+  max-width: 330px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.meal-details .info .tags span {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+  display: block;
+  text-align: center;
+  border-radius: 50px;
+  width: 150px;
+  font-family: "Dancing Script";
+  margin-bottom: 20px;
+}
+
+.meal-details .btns-tabs {
+  width: fit-content;
+  margin: -4px auto 40px;
+  display: flex;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.meal-details .btns-tabs span {
+  padding: 10px;
+  border-bottom: 2px solid;
+  cursor: pointer;
+  transition-duration: var(--drt);
+}
+
+.meal-details .btns-tabs span.active {
+  color: var(--secondary-color);
+  border-color: var(--secondary-color);
+}
+
+.meal-details .recipe {
+  text-align: center;
+  font-family: cursive;
+}
+
+.meal-details .recipe .inst {
+  display: none;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+
+.meal-details .recipe .ingr {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-bottom: 30px;
+  gap: 5px;
+}
+
+.meal-details .recipe .ingr li {
+  padding: 10px;
+  background-color: wheat;
+}
+
+.meal-details .youtube-link {
+  margin-bottom: 50px;
+  background-color: red;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: capitalize;
+  font-family: cursive;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+  width: fit-content;
+  margin: 0 auto 50px;
+}
+
+.meal-details .back {
+  background-color: var(--primary-color);
+  font-size: 20px;
+  padding: 5px;
+  position: fixed;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* Areas  Styling*/
+.areas-section {
+  padding: 100px 0;
+}
+
+@media (max-width: 767px) {
+  .areas-section {
+    padding: 150px 0 100px;
+  }
+}
+
+
+.areas-section .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+  gap: 40px;
+}
+
+.areas-section .country {
+  box-shadow: 0 0 10px #777;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.areas-section .country .image {
+  height: calc(100% - 40px);
+}
+
+.areas-section .country .image img {
+  width: 100%;
+  height: 100%;
+}
+
+.areas-section .country .title {
+  text-align: center;
+  margin: 6px 0 10px;
+  font-size: 20px;
+}
+
+/*Category styling*/
+
+.category-section {
+  padding: 100px 0;
+}
+
+@media (max-width: 767px) {
+  .category-section {
+    padding: 150px 0 100px;
+  }
+}
+
+.category-section .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+
+.category-section .container>.category {
+  box-shadow: 0 0 10px #777;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.category-section .category .image {
+  padding: 20px;
+  border-bottom: 2px solid #ccc;
+}
+
+.category-section .category h3 {
+  padding: 10px 0;
+}
+
+/*Ingredients Section*/
+.ingredients-section {
+  padding: 100px 0;
+}
+
+@media (max-width: 767px) {
+  .ingredients-section {
+    padding: 150px 0 100px;
+  }
+}
+
+.ingredients-section .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  text-align: center;
+  gap: 40px;
+}
+
+.ingredients-section .ingredient {
+  padding: 20px;
+  box-shadow: 0 0 10px #777;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.ingredients-section .ingredient h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+
+.ingredients-section .ingredient p {
+  line-height: 1.7;
+  font-size: 18px;
+  overflow: auto;
+  max-height: 100px;
+}
