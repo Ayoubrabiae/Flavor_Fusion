@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: 'Dancing Script', cursive;
+  font-family: "open-sans" sans-serif;
   background-color: #FFFDD0;
 }
 
@@ -31,7 +31,11 @@ img {
   max-width: 100%;
 }
 
-
+h1,
+h2,
+h3 {
+  font-family: "dancing script";
+}
 
 .container {
   margin: 0 auto;
@@ -55,12 +59,6 @@ img {
     width: 1170px;
   }
 }
-
-/* @media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-} */
 
 /* App Styling */
 
@@ -188,6 +186,24 @@ header h1 {
   line-height: 1.7;
   display: block;
   margin-bottom: 20px;
+}
+
+.hero-section button {
+  display: block;
+  margin: 0 auto;
+  padding: 8px 25px;
+  font-size: 17px;
+  font-family: "dancing script";
+  text-transform: capitalize;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition-duration: var(--drt);
+}
+
+.hero-section button:hover {
+  background-color: var(--primary-color);
 }
 
 /* Search results styling */
@@ -388,7 +404,6 @@ header h1 {
 
 .meal-details .recipe {
   text-align: center;
-  font-family: cursive;
 }
 
 .meal-details .recipe .inst {
