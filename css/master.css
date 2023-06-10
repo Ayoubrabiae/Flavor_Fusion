@@ -190,24 +190,6 @@ header h1 {
   margin-bottom: 20px;
 }
 
-.hero-section button {
-  display: block;
-  margin: 0 auto;
-  padding: 8px 25px;
-  font-size: 17px;
-  font-family: "dancing script";
-  text-transform: capitalize;
-  font-weight: bold;
-  border-radius: 30px;
-  border: none;
-  cursor: pointer;
-  transition-duration: var(--drt);
-}
-
-.hero-section button:hover {
-  background-color: var(--primary-color);
-}
-
 /* Search results styling */
 
 .search-results {
