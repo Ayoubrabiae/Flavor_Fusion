@@ -10,7 +10,7 @@ Flavour Fusion is a web application that provides a collection of recipes from v
 - Get a random recipe suggestion
 
 ## Demo
-[Demo](https://ayoubrabiae.github.io/Flavor_Fusion)
+A live demo of the Flavor Fusion is available at  [Demo](https://ayoubrabiae.github.io/Flavor_Fusion)
 
 
 ## Technologies Used
@@ -19,4 +19,4 @@ Flavour Fusion is a web application that provides a collection of recipes from v
 - JavaScript
 
 ## Contact 
-For any additional questions or support, please feel free to contact me at [my email](mailto: rabiyaeayoub@gmail.com)
+For any additional questions or support, please feel free to contact me at [my email](mailto:rabiyaeayoub@gmail.com).
